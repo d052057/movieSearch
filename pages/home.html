@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <h4>Movie search</h4>
+        <!--<div class="form-group">
+          <input type="text" ng-model="movie" class="form-control" />
+        </div>-->
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class='input-group-text bg-transparent'><i class="fa fa-search"></i></span>
+                </div>
+                <input class="form-control border-left-0 border" type="search" ng-model="movie" placeholder="Enter movie title...">
+            </div>
+        </div>
+        <a href="#/search/{{ movie }}" class="btn btn-primary" ng-style="{ display: movie ? 'block' : 'none' }">
+            Get Results from TheMovieDB.org
+        </a>
+    </div>
+</div>

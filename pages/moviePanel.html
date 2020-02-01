@@ -1,0 +1,27 @@
+<p>
+    <a href="/">Back to Search</a>
+</p>
+Search for <strong>{{ movie }}</strong> - total counts {{movieResult.total_results}}
+<hr />
+<div ng-repeat="m in movieResult.results">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-default">
+                <div class="card-header">
+                    <h3 class="card-title">{{m.original_title}}</h3>
+                    <p class="card-text">Release date: {{ m.release_date | date:'longDate' }}</p>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="card-img-top col-md-6 pull-left">
+                            <img ng-src="{{imagePath + m.poster_path}}" alt="no poster found!">
+                        </div>
+                        <div class="col-md-6 pull-right">
+                            {{ m.overview }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
